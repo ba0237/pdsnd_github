@@ -51,8 +51,7 @@ def get_filters():
                         
             return city, month, day
                         
-        except(KeyError):
-            print("There is an error. Please try again!")
+
 
 
 def load_data(city, month, day):
