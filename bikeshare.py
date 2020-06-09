@@ -54,7 +54,17 @@ def get_filters():
         except(KeyError):
             print("There is an error. Please try again!")
 
-
+def time_stats_data(df):
+    i = 0
+    while True:
+        raw = input("Would you like to see 5 lines of raw data? Enter yes or no.\n")
+        
+        if raw.lower() != 'yes':
+            break
+        else:
+             print(df[i:i+5])
+             i = i + 5
+			 
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
