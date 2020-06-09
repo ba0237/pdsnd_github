@@ -51,8 +51,7 @@ def get_filters():
                         
             return city, month, day
                         
-        except(KeyError):
-            print("There is an error. Please try again!")
+
 
 def time_stats_data(df):
     i = 0
@@ -100,8 +99,7 @@ def load_data(city, month, day):
     if month != 'all':
         # use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month) + 1
-
+       
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
 
@@ -250,6 +248,16 @@ def user_stats(df):
   
    
 def display_data(df):
+    i = 0
+    while True:
+        raw = input("Would you like to see 5 lines of raw data? Enter yes or no.\n")
+        
+        if raw.lower() != 'yes':
+            break
+        else:
+             print(df[i:i+5])
+             i = i + 5
+def time_stats_data(df):
     i = 0
     while True:
         raw = input("Would you like to see 5 lines of raw data? Enter yes or no.\n")
