@@ -5,6 +5,17 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+			  
+def time_stats_data(df):
+    i = 0
+    while True:
+        raw = input("Would you like to see 5 lines of raw data? Enter yes or no.\n")
+        
+        if raw.lower() != 'yes':
+            break
+        else:
+             print(df[i:i+5])
+             i = i + 5
 
 def get_filters():
     """
