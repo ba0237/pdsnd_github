@@ -7,6 +7,7 @@ Explore US Bikeshare Data
 ### washington.csv
 	newyork.csv
 	chicago.csv
+	bikeshare.csv
 
 ### UDACITY workers
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
